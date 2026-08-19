@@ -320,7 +320,35 @@ nav-right {
   .hero {
     padding: 40px 20px;
   }
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #eaecf0;
+    padding: 16px;
+  }
 
+  .sidebar-logo {
+    padding: 0 8px 16px;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .sidebar-nav .nav-item {
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .logout {
+    margin-top: 12px;
+  }
+
+  .app-layout {
+    flex-direction: column;
+  }
+  
   .dashboard-heading h1 {
     font-size: 26px;
   }
@@ -346,4 +374,59 @@ nav-right {
 .attendance-card,
 .notification-card {
   min-width: 0;
+}
+.app-layout {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 16px;
+  background: white;
+  border-right: 1px solid #eaecf0;
+}
+
+.sidebar-logo {
+  padding: 0 12px 28px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #475467;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background: #f2f4f7;
+}
+
+.nav-item.active {
+  background: #f2f4f7;
+  color: #172033;
+  font-weight: 600;
+}
+
+.logout {
+  margin-top: auto;
 }
