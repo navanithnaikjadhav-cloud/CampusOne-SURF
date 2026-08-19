@@ -1,42 +1,29 @@
 import './App.css'
+import Navbar from './components/Navbar'
+import AttendanceCard from './components/AttendanceCard'
+import NotificationCard from './components/NotificationCard'
 
 function App() {
   return (
     <div className="app">
-      <nav className="navbar">
-        <div className="logo">CampusOne</div>
-        <div className="nav-label">Student Portal</div>
-      </nav>
+      <Navbar />
 
       <main className="hero">
-        <section className="login-card">
-          <h1 className="hero-title">Welcome to CampusOne</h1>
+        <section className="dashboard">
+          <div className="dashboard-heading">
+            <p className="card-label">Student Dashboard</p>
 
-          <p className="hero-text">
-            Your Campus. One Platform.
-          </p>
+            <h1>Welcome to CampusOne</h1>
 
-          <div className="form-group">
-            <label htmlFor="studentId">Student ID</label>
-            <input
-              id="studentId"
-              type="text"
-              placeholder="Enter your student ID"
-            />
+            <p>
+              Here's your current campus overview.
+            </p>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              id="password"
-              type="password"
-              placeholder="Enter your password"
-            />
+          <div className="dashboard-grid">
+            <AttendanceCard />
+            <NotificationCard />
           </div>
-
-          <button className="login-button">
-            Sign In
-          </button>
         </section>
       </main>
     </div>
